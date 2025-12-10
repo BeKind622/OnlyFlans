@@ -9,7 +9,6 @@ Route::get('/', [RecipeController::class, 'index'])->name('home');
 // Public recipe pages
 Route::get('/recipes', [RecipeController::class, 'index'])->name('recipes.index');
 
-// ✅ CREATE MUST COME FIRST
 Route::get('/recipes/create', [RecipeController::class, 'create'])
     ->middleware('auth')
     ->name('recipes.create');
@@ -18,7 +17,6 @@ Route::post('/recipes', [RecipeController::class, 'store'])
     ->middleware('auth')
     ->name('recipes.store');
 
-// ✅ SHOW COMES AFTER
 Route::get('/recipes/{recipe}', [RecipeController::class, 'show'])
     ->whereNumber('recipe')
     ->name('recipes.show');
