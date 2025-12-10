@@ -1,4 +1,4 @@
-<x-layouts.blog title="My Recipes">
+<x-app-layout >
 
     <h1 class="text-2xl font-bold mb-6">My Recipes</h1>
 
@@ -12,6 +12,10 @@
             Create your first recipe
         </a>
     @else
+    <a href="{{ route('recipes.create') }}"
+           class="inline-block mt-4 bg-amber-600 text-white px-4 py-2 rounded">
+            Create another recipe
+        </a>
         <div class="space-y-4">
             @foreach ($recipes as $recipe)
                 <div class="bg-white border rounded-lg p-4 flex justify-between items-center">
@@ -53,4 +57,4 @@
         </div>
     @endif
 
-</x-layouts.blog>
+</x-app-layout>

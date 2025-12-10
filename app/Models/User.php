@@ -22,6 +22,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'is_admin'
     ];
 
     /**
@@ -46,10 +47,18 @@ class User extends Authenticatable
         return [
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
+            'is_admin' => 'boolean',
         ];
     }
     // Defines user-recipe relationship
-     public function recipes(){
+    public function recipes(){
         return $this->hasMany(Recipe::class);
     }
+
+    public function isAdmin(): bool
+    {
+    return (bool) $this->is_admin;
+    }
+
+
 }

@@ -1,4 +1,4 @@
-<x-layouts.blog title="Recipes">
+<x-app-layout>
 
     <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
 
@@ -58,4 +58,4 @@
         {{ $recipes->links() }}
     </div>
 
-</x-layouts.blog>
+</x-app-layout>

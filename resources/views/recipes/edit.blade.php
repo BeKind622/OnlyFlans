@@ -1,4 +1,4 @@
-<x-layouts.blog title="Edit Recipe">
+<x-app-layout>
     <form method="POST"
           action="{{ route('recipes.update', $recipe) }}"
           enctype="multipart/form-data"
@@ -39,4 +39,4 @@
         </button>
 
     </form>
-</x-layouts.blog>
+</x-app-layout>

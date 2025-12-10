@@ -1,4 +1,4 @@
-<x-layouts.blog title="Create Recipe">
+<x-app-layout>
 
 <div class="max-w-2xl mx-auto px-4 py-10">
 
@@ -76,4 +76,4 @@
 
 </div>
 
-</x-layouts.blog>
+</x-app-layout>

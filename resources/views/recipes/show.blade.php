@@ -1,4 +1,4 @@
-<x-layouts.blog :title="$recipe->title">
+<x-app-layout>
     <article class="bg-white rounded-lg shadow p-8">
 
         <h1 class="text-3xl font-bold mb-4">
@@ -40,4 +40,4 @@
         @endauth
 
     </article>
-</x-layouts.blog>
+</x-app-layout>
