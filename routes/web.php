@@ -8,9 +8,7 @@ use App\Http\Controllers\Admin\AdminUserController;
 use App\Http\Controllers\Admin\AdminRecipeController;
 
 /*
-|--------------------------------------------------------------------------
-| Public Routes
-|--------------------------------------------------------------------------
+Public Routes
 */
 
 // Homepage
@@ -23,9 +21,7 @@ Route::get('/recipes/{recipe}', [RecipeController::class, 'show'])
     ->name('recipes.show');
 
 /*
-|--------------------------------------------------------------------------
-| Authenticated User Routes
-|--------------------------------------------------------------------------
+Authenticated User Routes
 */
 
 Route::middleware('auth')->group(function () {
@@ -47,9 +43,7 @@ Route::middleware('auth')->group(function () {
 });
 
 /*
-|--------------------------------------------------------------------------
-| Admin Routes
-|--------------------------------------------------------------------------
+Admin Routes
 */
 
 Route::middleware(['auth', 'admin'])
@@ -66,10 +60,5 @@ Route::middleware(['auth', 'admin'])
         Route::resource('recipes', AdminRecipeController::class)
             ->except(['create', 'store', 'show']);
     });
-/*
-|--------------------------------------------------------------------------
-| Auth (Breeze)
-|--------------------------------------------------------------------------
-*/
 
 require __DIR__.'/auth.php';
